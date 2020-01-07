@@ -80,5 +80,5 @@ def wgs84_radius(phi):
     import numpy
     a = 6378137 # major axis at Equator in meters
     b = 6356752.3142 # minor axis at Poles in meters
-    d = np.sqrt((a**2)*(b**2)/(a**2 + (b**2 - a**2)numpy.cos(phi*numpy.pi/180)**2))
+    d = numpy.sqrt((a**2)*(b**2)/(a**2 + (b**2 - a**2)*numpy.cos(phi*numpy.pi/180)**2))
     return(d)
